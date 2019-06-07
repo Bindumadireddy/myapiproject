@@ -83,6 +83,7 @@ else{
     }
     if((statuss!="none")&&(statuss!="not ready")&&(statuss!="featured")){
       errors.push("Not a valid status")
+
       c++;
     }
   }
@@ -115,7 +116,7 @@ else{
 });
 
 //1.3.GET ID
-
+console.log("gah")
 server.route({
     method:"GET",
     path:"/api/producer/{id}",
