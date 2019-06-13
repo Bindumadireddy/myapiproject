@@ -83,7 +83,6 @@ else{
     }
     if((statuss!="none")&&(statuss!="not ready")&&(statuss!="featured")){
       errors.push("Not a valid status")
-
       c++;
     }
   }
@@ -116,7 +115,7 @@ else{
 });
 
 //1.3.GET ID
-console.log("gah")
+
 server.route({
     method:"GET",
     path:"/api/producer/{id}",
@@ -472,7 +471,7 @@ server.route({
     var submit=request.payload.submit_date;
     var approve=request.payload.approval_date;
     var posted=request.payload.post_date_time;
-    if(name.length==1||url.length==1||approval.length==1||producers.length==1||submit.length==1||approve.length==1||posted.length==1){
+    if(name.length==1||url.length==1){
       return "ALL THE FIELDS MUST BE FILLED";
     }
     else{
@@ -584,7 +583,7 @@ server.route({
     var approve=request.payload.approval_date;
     var posted=request.payload.post_date_time;
 		var name=request.payload.beat_name;
-    if(name.length==1||url.length==1||approval.length==1||producers.length==1||submit.length==1||approve.length==1||posted.length==1){
+    if(name.length==1||url.length==1){
       return "ALL THE FIELDS MUST BE FILLED";
     }
     else{
